@@ -1,0 +1,5 @@
+make ft_split in auxlib
+learn how to makefile
+check the libft.h
+make ft_lstmap in lllib
+End the clib
