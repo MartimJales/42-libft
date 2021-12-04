@@ -27,7 +27,7 @@ static int	aux(const char *big, const char *little, size_t len)
 	return (!(*little));
 }
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	while (*big)
 	{

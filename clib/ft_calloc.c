@@ -6,13 +6,13 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:13 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:14 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:19:41 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*new;
 

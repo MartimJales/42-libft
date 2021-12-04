@@ -6,14 +6,13 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:39 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:40 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:20:12 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 // This sheet is incorret for sure but it's just to remember the logic
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int		i;
 	void	*new;

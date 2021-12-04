@@ -6,7 +6,7 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:37:10 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:37:11 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:12:49 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //Outputs the integer ’n’ to the given file
 //descriptor.
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char			c;
 	unsigned int	x;

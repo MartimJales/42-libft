@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:45 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:47 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:20:26 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

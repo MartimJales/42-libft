@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:32 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:33 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:19:52 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	int	i;
 

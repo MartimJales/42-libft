@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:09 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:11 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:19:35 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	int	i;
 

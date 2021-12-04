@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:34 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:36 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:19:58 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while ((*s1 || *s2) && n > 0)
 	{

@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:24 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:26 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:23:30 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isascii(char c)
 {
 	if (c < 0 || c > 127)
 		return (0);

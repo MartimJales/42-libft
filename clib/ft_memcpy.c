@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:36 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:38 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/04 12:20:06 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int	i;
 
