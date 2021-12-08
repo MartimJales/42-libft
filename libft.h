@@ -6,7 +6,7 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:55:35 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 12:40:13 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/08 15:58:12 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 # define LIBFT_H
 
 // include of main headers
+# include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <string.h>
+# include<limits.h>
 
 //Struct of Linked list
 typedef struct s_list
@@ -54,8 +57,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putstr(char *str);
 char	*ft_strchr(const char *s, int c);
-char	*strdup(const char *s);
-size_t	strlcat(char *dst, const char *src, size_t size);
+char	*ft_strdup(const char *s);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int		ft_strlen(char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

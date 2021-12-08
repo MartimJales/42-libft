@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:52:19 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:52:20 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/08 15:32:33 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <../libft.h>
+#include <libft.h>
 
 //Counts the number of elements in a list.
 int	ft_lstsize(t_list *lst)

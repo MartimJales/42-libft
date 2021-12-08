@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:52:16 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:52:18 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/08 15:32:14 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 //Allocates (with malloc(3)) and returns a new
 //element. The variable ’content’ is initialized

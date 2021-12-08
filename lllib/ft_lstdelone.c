@@ -6,11 +6,11 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:52:07 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:52:09 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/08 15:32:03 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <../libft.h>
+#include "libft.h"
 
 //Takes as a parameter an element and frees the
 //memory of the element’s content using the function
