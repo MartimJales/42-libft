@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//RETURN PROBLEM - CANNOT RETURN CONST CHAR
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	size;
 
 	size = ft_strlen(s);
-	while (str[--size])
-		if (str[size] == c)
-			return (str + size);
-	return (NULL);
+	while (s[--size])
+		if (s[size] == c)
+			return (s + size);
+	return (0);
 }

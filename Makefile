@@ -91,11 +91,9 @@ OBJ			= $(FILES:%.c=%.o)
 all: $(NAME)
 
 copy:
-	cp -f testes/*.c .
-#	cp -f libc-funcs/*.c .
-#	cp -f additional-funcs/*.c .
-#	cp -f bonus-funcs/*.c .
-#	cp -f personal-funcs/*.c .
+	cp -f clib/*.c .
+	cp -f lllib/*.c .
+	cp -f auxlib/*.c .
 
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
@@ -112,11 +110,11 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+#re: fclean all
 
 # I use .PHONY to make sure that gnu make will still run even if files called
 # clean / fclean / all and re already exist in the directory
-.PHONY: clean fclean all re
+#.PHONY: clean fclean all re
 
 
 

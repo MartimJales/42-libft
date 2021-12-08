@@ -16,6 +16,7 @@
 
 // include of main headers
 # include <stdlib.h>
+# include <stddef.h>
 
 //Struct of Linked list
 typedef struct s_list
