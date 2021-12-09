@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//RETURN PROBLEM - CANNOT RETURN CONST CHAR
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	size;
 
-	size = ft_strlen(s);
+	size = ft_strlen((char *)s);
 	while (s[--size])
 		if (s[size] == c)
-			return (s + size);
+			return (char *)(s + size);
 	return (0);
 }
