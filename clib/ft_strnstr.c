@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (*big)
 	{
 		if (*big == *little && aux(big, little, len))
-			return (big);
+			return (char *)(big);
 		big++;
 	}
 	return (NULL);

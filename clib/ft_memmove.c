@@ -10,25 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// This sheet is incorret for sure but it's just to remember the logic
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		i;
-	void	*new;
-	int		size;
+	unsigned char	*str;
+	unsigned char	*dst;
+	size_t			i;
+	unsigned char	*new;
+	int				size;
 
-	size = ft_strlen(src);
+	str = (unsigned char *)src;
+	dst = (unsigned char *)dest;
+	size = ft_strlen((char *)str);
 	i = 0;
 	new = malloc(sizeof(void *) * (size + 1));
-	while (src[i] && i < n)
+	while (str[i] && i < n)
 	{
-		new[i] = src[i];
+		new[i] = str[i];
 		i++;
 	}
 	i = -1;
 	while (new[++i])
-		dest[i] = new[i];
-	dest[i] = 0;
-	return (dest);
+		dst[i] = new[i];
+	dst[i] = 0;
+	return ((void *)(dst));
 }

@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*strdup(const char *s)
 {
-	char	*new;
-
-	if (!*s)
-		return (NULL);
-
+	(void)s;
+	return (NULL);
 }
