@@ -10,7 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+char	*ft_push_str(unsigned int n, int *i, char *num)
+{
+	char	c;
+
+	c = n + '0';
+	num[*i] = c;
+	*i = *i + 1;
+	num[*i] = '\0';
+	return (num);
+}
 
 //Allocates (with malloc(3)) and returns a string
 //representing the integer received as an argument.
@@ -38,13 +48,3 @@ char	*ft_itoa(int n)
 	return (ft_push_str(new % 10, &i, num));
 }
 
-char	*ft_push_str(unsigned int n, int *i, str num)
-{
-	char	c;
-
-	c = n + '0';
-	num[*i] = c;
-	*i = *i + 1;
-	num[*i] = '\0';
-	return (num);
-}

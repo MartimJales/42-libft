@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 //Applies the function ’f’ to each character of
 //the string ’s’ , and passing its index as first
@@ -29,5 +29,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[++i])
 		new[i] = f(i, s[i]);
 	new[i] = '\0';
-	return new;
+	return (new);
 }
