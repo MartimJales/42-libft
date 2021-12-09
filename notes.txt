@@ -1,4 +1,27 @@
-make ft_split in auxlib
-check the libft.h
-make ft_lstmap in lllib
-End the clib
+--ERRORS--
+ft_memcpy
+ft_memmove
+ft_memchr
+ft_memcmp
+ft_strchr
+ft_strrchr
+ft_strlcpy
+ft_strlcat
+ft_strnstr
+ft_atoi
+ft_strdup
+ft_calloc
+ft_substr
+ft_strjoin
+ft_strtrim
+ft_split
+ft_itoa
+ft_strmapi
+ft_putnbr_fd
+
+#BONUS#
+ft_lstadd_front
+ft_lstsize
+ft_lstlast
+ft_lstdelone
+ft_lstclear
