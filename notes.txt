@@ -1,8 +1,4 @@
 --ERRORS--
-ft_memcpy
-ft_memmove
-ft_memchr
-ft_memcmp
 ft_strchr
 ft_strrchr
 ft_strlcpy

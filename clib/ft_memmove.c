@@ -12,27 +12,31 @@
 
 #include "libft.h"
 
+//The  memmove()  function  copies  n  bytes  from memory area src to memory area dest.  The memory areas may overlap: copying takes place as
+//though the bytes in src are first copied into a temporary array that does not overlap src or dest, and the bytes are then copied  from  the
+//       temporary array to dest.
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	*dst;
-	size_t			i;
-	unsigned char	*new;
-	int				size;
+	int				i;
 
 	str = (unsigned char *)src;
 	dst = (unsigned char *)dest;
-	size = ft_strlen((char *)str);
-	i = 0;
-	new = malloc(sizeof(void *) * (size + 1));
-	while (str[i] && i < n)
+	if (!dest || !src)
+		return (NULL);
+	if (dest > src)
 	{
-		new[i] = str[i];
-		i++;
+		i = (int)n;
+		while (--i >= 0)
+			dst[i] = str[i];
 	}
-	i = -1;
-	while (new[++i])
-		dst[i] = new[i];
-	dst[i] = 0;
+	else
+	{
+		i = -1;
+		while (++i < (int)n)
+			dst[i] = str[i];
+	}
 	return ((void *)(dst));
 }
