@@ -1,18 +1,15 @@
 --ERRORS--
-ft_strchr
-ft_strrchr
-ft_strlcpy
-ft_strlcat
 ft_strnstr
-ft_atoi
 ft_strdup
-ft_calloc
-ft_substr
 ft_strjoin
 ft_strtrim
+ft_substr
+ft_strmapi
+
+ft_atoi
+ft_calloc
 ft_split
 ft_itoa
-ft_strmapi
 ft_putnbr_fd
 
 #BONUS#

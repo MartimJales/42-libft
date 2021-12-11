@@ -6,13 +6,15 @@
 /*   By: mjales <mjales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 11:50:55 by mjales            #+#    #+#             */
-/*   Updated: 2021/12/04 11:50:56 by mjales           ###   ########.fr       */
+/*   Updated: 2021/12/11 17:44:56 by mjales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
