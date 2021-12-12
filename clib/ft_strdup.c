@@ -14,6 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	(void)s;
-	return (NULL);
+	size_t	i;
+	size_t	len;
+	char	*new;
+
+	len = ft_strlen((char *)s);
+	new = malloc(len + 1);
+	i = -1;
+	while (s[++i])
+		new[i] = s[i];
+	new[i] = 0;
+	return (new);
 }

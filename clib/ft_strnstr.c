@@ -10,30 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-static int	aux(const char *big, const char *little, size_t len)
-{
-	while (*big && *little && len)
-	{
-		if (*little != *big)
-		{
-			return (0);
-		}
-		little++;
-		big++;
-		len--;
-	}
-	return (!(*little));
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	while (*big)
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	if (!little || !big)
+		return (NULL);
+	if (!little || !little[0])
+		return ((char *) big);
+	while (big[i] && i < len)
 	{
-		if (*big == *little && aux(big, little, len))
-			return (char *)(big);
-		big++;
+		j = 0;
+		while (little[j] == big[i + j] && i + j < len)
+			j++;
+		if (!little[j])
+			return ((char *)&big[i]);
+		i++;
 	}
 	return (NULL);
 }

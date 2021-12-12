@@ -20,22 +20,22 @@
 //of ’s1’ and ’s2’.
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		size;
-	int		size1;
+	size_t	i;
+	size_t	size1;
+	size_t	size2;
 	char	*new;
 
-	size1 = strlen(s1);
-	size = size1 + strlen(s2);
-	new = malloc(sizeof(char) * size + 1);
+	size1 = ft_strlen((char *)s1);
+	size2 = ft_strlen((char *)s2);
+	new = malloc(size1 + size2 + 1);
 	i = -1;
 	while (++i < size1)
 		new[i] = s1[i];
-	while (i < size)
+	while (i < size1 + size2)
 	{
-		new[i] = s2[i];
+		new[i] = s2[i - size1];
 		i++;
 	}
-	new[i] = '\0';
+	new[i] = 0;
 	return (new);
 }
