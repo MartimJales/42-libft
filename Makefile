@@ -40,3 +40,7 @@ bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:			all clean fclean re bonus
+
+#so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+#	gcc -nostartfiles -shared -o libft.so $(OBJS)
