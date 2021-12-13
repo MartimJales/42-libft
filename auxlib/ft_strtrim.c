@@ -10,50 +10,48 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-//Falta testar e dar uma segunda vista de olhos em possiveis erros
+static int	find_char(int c, char *s)
+{
+	size_t	i;
 
-// Reduzir o numeor de linhas e otimizar o código - Feito muito rápido
-
-// TGIS SHIT HAVE A BUG
-
-#include <stdlib.h>
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (s[i] == c);
+}
 
 //Allocates (with malloc(3)) and returns a copy of
 //’s1’ with the characters specified in ’set’ removed
 //from the beginning and the end of the string.
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	(void)set;
-	(void)s1;
-	return "BUG";
+	char	*new;
+	size_t	begin;
+	size_t	end;
+	size_t	len_new;
 
-	//int		i;
-	//int		begin;
-	//int		end;
-	//char	*new;
-
-	//begin = 0;
-	//end = 0;
-	//while (*set)
-	//{
-	//	if (*set == s1[0])
-	//		begin = 1;
-	//	if (*set == s1[size - 1])
-	//		end = 1;
-	//	set++;
-	//}
-	//new = malloc(sizeof(char) * (strlen(s1) - begin - end + 1));
-	//i = -1;
-	//while (s1[++i])
-	//{
-	//	// Atenção ao acesso de memória inválido na linha abaixo
-	//	new[begin] = s1[i];
-	//	begin++;
-	//}
-	//if (end)
-	//	new[size - 2] = '\0';
-	//else
-	//	new[size - 1] 0 '\0';
-	//return (new);
+	begin = 0;
+	end = ft_strlen((char *)s1);
+	if (!s1)
+		return (NULL);
+	if (!set)
+	{
+		// Tinha umerro aqui porque não estava inicializado, confirmar again
+		// TESTAR PRMIEIRO e ver se PERMANECE
+		new = malloc(end) + 1);
+		ft_strlcpy(new, s1, len_new + 1);
+		return (new);
+	}
+	while (s1[begin] && find_char(s1[begin], (char *) set))
+		begin++;
+	if (begin == end)
+		return (NULL);
+	while (find_char(s1[end], (char *) set))
+		end--;
+	len_new = end - begin + 1;
+	new = malloc(len_new);
+	ft_strlcpy(new, s1 + begin, len_new);
+	return (new);
 }
