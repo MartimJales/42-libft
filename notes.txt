@@ -1,6 +1,6 @@
 --ERRORS--
 ft_atoi
-ft_calloc
+ft_calloc -> Just a warning
 ft_split
 ft_itoa
 ft_putnbr_fd

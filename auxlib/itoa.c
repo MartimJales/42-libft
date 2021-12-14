@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
 static char	*ft_push_str(size_t n, size_t *i, char *num)
 {
@@ -21,6 +22,16 @@ static char	*ft_push_str(size_t n, size_t *i, char *num)
 	*i = *i + 1;
 	num[*i] = '\0';
 	return (num);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 static void	ft_reverse(char *str)
@@ -49,7 +60,7 @@ char	*ft_itoa(int n)
 	size_t	new;
 	size_t	i;
 
-	// I need to calculate the correct size for malloc
+	// Check the limit range of an integer number
 	num = malloc(20);
 	new = n;
 	i = 0;
@@ -62,9 +73,21 @@ char	*ft_itoa(int n)
 	while (new > 9)
 	{
 		ft_push_str(new % 10, &i, num);
-		new /= 10;
+		printf("test: %s\n", num);
+		new = new / 10;
 	}
 	ft_push_str(new % 10, &i, num);
 	ft_reverse(num);
 	return (num);
+}
+
+int	main()
+{
+	char	*s;
+	int		num;
+
+	num = INT_MAX;
+	s = ft_itoa(num);
+	printf("num: %d\n", num);
+	printf("str: %s\n", s);
 }
