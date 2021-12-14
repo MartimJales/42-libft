@@ -20,9 +20,9 @@ BONUS_OBJS		= $(BONUS:.c=.o)
 all: $(NAME)
 
 copy:
-	cp -f clib/*.c .
-	cp -f lllib/*.c .
-	cp -f auxlib/*.c .
+	cp -f clib/ft_*.c .
+	cp -f lllib/ft_*.c .
+	cp -f auxlib/ft_*.c .
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
