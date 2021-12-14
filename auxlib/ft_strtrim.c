@@ -34,24 +34,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	begin = 0;
 	end = ft_strlen((char *)s1);
-	if (!s1)
-		return (NULL);
-	if (!set)
-	{
-		// Tinha umerro aqui porque não estava inicializado, confirmar again
-		// TESTAR PRMIEIRO e ver se PERMANECE
-		new = malloc(end) + 1);
-		ft_strlcpy(new, s1, len_new + 1);
-		return (new);
-	}
-	while (s1[begin] && find_char(s1[begin], (char *) set))
+	while (s1[begin] && find_char(s1[begin], (char *)set))
 		begin++;
 	if (begin == end)
-		return (NULL);
-	while (find_char(s1[end], (char *) set))
+	{
+		new = malloc(1);
+		*new = 0;
+		return (new);
+	}
+	while (find_char(s1[end], (char *)set))
 		end--;
 	len_new = end - begin + 1;
-	new = malloc(len_new);
-	ft_strlcpy(new, s1 + begin, len_new);
+	new = malloc(len_new + 1);
+	ft_strlcpy(new, s1 + begin, len_new + 1);
 	return (new);
 }

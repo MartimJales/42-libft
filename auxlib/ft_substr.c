@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 //Falta testar e dar uma segunda vista de olhos em possiveis erros
 
-#include <stdlib.h>
+#include "libft.h"
 
 //Allocates (with malloc(3)) and returns a substring
 //from the string ’s’.
@@ -22,15 +21,20 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	size_t	i;
+	size_t	len_s;
 
-	sub = malloc(len - start + 1);
-	if (!sub)
-		return (NULL);
-	i = -1;
-	while (++i < len && s[i + start])
-		sub[i] = s[i + start];
-	if (i < len)
-		sub[i] = '\0';
+	len_s = ft_strlen(s);
+	if (len_s < len)
+		len = len_s;
+	if (start > len_s)
+	{
+		sub = malloc(1);
+		*sub = 0;
+		return (sub);
+	}
+	if (start + len > len_s)
+		len -= start;
+	sub = malloc(len + 1);
+	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
