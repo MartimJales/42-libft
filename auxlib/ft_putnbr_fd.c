@@ -16,19 +16,9 @@
 //descriptor.
 void	ft_putnbr_fd(int n, int fd)
 {
-	char			c;
-	unsigned int	x;
+	char	*s;
 
-	x = n;
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		x = n * -1;
-	}
-	if (x > 9)
-	{
-		ft_putnbr_fd(x / 10, fd);
-	}
-	c = (x % 10) + '0';
-	ft_putchar_fd(c, fd);
+	s = ft_itoa(n);
+	ft_putstr_fd(s, fd);
+	free(s);
 }
