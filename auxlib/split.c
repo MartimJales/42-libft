@@ -10,7 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 size_t	next_pos(char const *s, int c)
 {
@@ -27,13 +38,55 @@ size_t	string_number(char const *s, int c)
 {
 	size_t	i;
 	size_t	num;
+	size_t	flag;
 
+	flag = 0;
 	i = -1;
 	num = 0;
 	while (s[++i])
+	{
 		if (s[i] == c)
-			num++;
+		{
+			if (!flag)
+				num++;
+			flag = 1;
+		}
+		else
+			flag = 0;
+	}
+	if (s[0] == c || s[i - 1] == c)
+		num--;
+	printf("num: %ld\n", num);
 	return (num + 1);
+}
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	if (size != 0)
+	{
+		while (src[i] && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = 0;
+	}
+	while (src[i])
+		i++;
+	return (i);
+}
+
+static int	find_char(int c, char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (s[i] == c);
 }
 
 //Allocates (with malloc(3)) and returns an array
@@ -52,11 +105,26 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	while (++i < num)
 	{
+		while (*s == c)
+			s++;
 		len = next_pos(s, c);
 		arr[i] = malloc(len + 1);
 		ft_strlcpy(arr[i], s, len + 1);
 		s = s + len + 1;
 	}
-	arr[i] = 0;
+	arr[i] = malloc(1);
+	arr[i] = NULL;
 	return (arr);
+}
+
+int	main(void)
+{
+	char	**tab;
+	size_t	i;
+
+	tab = ft_split("  tripouille  42  ", ' ');
+	i = -1;
+	while (tab[++i])
+		printf("stab[%ld]: %s\n", i, tab[i]);
+	printf("tab[%ld]: %s\n", i, tab[i]);
 }
