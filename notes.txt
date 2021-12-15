@@ -1,10 +1,4 @@
 --ERRORS--
-ft_atoi
 ft_split
 
 ft_calloc -> Just a warning
-#BONUS#
-ft_lstadd_front
-ft_lstlast
-ft_lstdelone
-ft_lstclear
