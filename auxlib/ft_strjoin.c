@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-//Falta testar e dar uma segunda vista de olhos em possiveis erros
-
 #include "libft.h"
 
 //Allocates (with malloc(3)) and returns a new
