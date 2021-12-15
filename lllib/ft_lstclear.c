@@ -19,10 +19,15 @@
 //NULL.
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	// I need to review this but it's not important
-	ft_lstiter(*lst, del);
-	// if (!(*lst->next))
-	// 	ft_lstclear(lst->next, del);
-	// del(lst->content);
-	// lst = NULL;
+	t_list	*new;
+
+	if (!lst)
+		return ;
+	while ((*lst))
+	{
+		new = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = new;
+	}
+	lst = NULL;
 }

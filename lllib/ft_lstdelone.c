@@ -18,7 +18,8 @@
 //The memory of ’next’ must not be freed.
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	// This look to simple, need to review
-	del(lst->content);
+	if (!del)
+		return ;
+	(*del)(lst->content);
 	free(lst);
 }
