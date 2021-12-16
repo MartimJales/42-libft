@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+//I HAVE A BUG IN STRING_NUMBER, RETHINK IN THAT SHIT
+
 size_t	next_pos(char const *s, int c)
 {
 	size_t	i;
@@ -32,6 +34,8 @@ size_t	string_number(char const *s, int c)
 	flag = 0;
 	i = -1;
 	num = 0;
+	if (!c)
+		return (1);
 	while (s[++i])
 	{
 		if (s[i] == c)
@@ -47,6 +51,7 @@ size_t	string_number(char const *s, int c)
 		return (1);
 	if (s[0] == c || s[i - 1] == c)
 		num--;
+	//printf("str_num: %ld\n", num);
 	return (num);
 }
 
@@ -62,13 +67,17 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	num = string_number(s, c);
-	arr = malloc(sizeof(char *) * num);
+	arr = malloc(sizeof(char *) * (num + 1));
 	i = -1;
+	//printf("num: %ld\n\n", num);
 	while (++i < num)
 	{
 		while (*s == c)
 			s++;
+		//printf("===(%ld)===\n", i);
+		//printf("loop: |%s|\n", s);
 		len = next_pos(s, c);
+		//printf("len: |%ld|\n", len);
 		arr[i] = malloc(len + 1);
 		ft_strlcpy(arr[i], s, len + 1);
 		s = s + len + 1;
@@ -77,3 +86,15 @@ char	**ft_split(char const *s, char c)
 	arr[i] = NULL;
 	return (arr);
 }
+
+//int	main(void)
+//{
+//	char	**tab;
+//	size_t	i;
+
+//	tab = ft_split("  tripouille  xx  ", ' ');
+//	i = -1;
+//	while (tab[++i])
+//		printf("stab[%ld]: |%s|\n", i, tab[i]);
+//	printf("tab[%ld]: |%s|\n", i, tab[i]);
+//}

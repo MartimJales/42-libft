@@ -45,6 +45,8 @@ size_t	string_number(char const *s, int c)
 	flag = 0;
 	i = -1;
 	num = 0;
+	if (!c)
+		return (1);
 	while (s[++i])
 	{
 		if (s[i] == c)
@@ -105,7 +107,7 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	num = string_number(s, c);
-	arr = malloc(sizeof(char *) * num);
+	arr = malloc(sizeof(char *) * (num + 1));
 	i = -1;
 	printf("num: %ld\n\n", num);
 	while (++i < num)
