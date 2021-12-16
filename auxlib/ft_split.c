@@ -27,13 +27,27 @@ size_t	string_number(char const *s, int c)
 {
 	size_t	i;
 	size_t	num;
+	size_t	flag;
 
+	flag = 0;
 	i = -1;
 	num = 0;
 	while (s[++i])
+	{
 		if (s[i] == c)
-			num++;
-	return (num + 1);
+		{
+			if (!flag)
+				num++;
+			flag = 1;
+		}
+		else
+			flag = 0;
+	}
+	if (s[i] == c)
+		return (1);
+	if (s[0] == c || s[i - 1] == c)
+		num--;
+	return (num);
 }
 
 //Allocates (with malloc(3)) and returns an array
@@ -47,16 +61,19 @@ char	**ft_split(char const *s, char c)
 	size_t	len;
 	char	**arr;
 
-	num = string_number(s, c) + 1;
+	num = string_number(s, c);
 	arr = malloc(sizeof(char *) * num);
 	i = -1;
 	while (++i < num)
 	{
+		while (*s == c)
+			s++;
 		len = next_pos(s, c);
 		arr[i] = malloc(len + 1);
 		ft_strlcpy(arr[i], s, len + 1);
 		s = s + len + 1;
 	}
-	arr[i] = 0;
+	arr[i] = malloc(1);
+	arr[i] = NULL;
 	return (arr);
 }
