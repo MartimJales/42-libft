@@ -1,4 +1,3 @@
 --ERRORS--
-ft_split
 
 ft_calloc -> Just a warning
