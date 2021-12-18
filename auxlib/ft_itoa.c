@@ -22,16 +22,6 @@ static char	*ft_push_str(size_t n, size_t *i, char *num)
 	return (num);
 }
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 static void	ft_reverse(char *str)
 {
 	char	c;
