@@ -1,3 +1,0 @@
---ERRORS--
-
-ft_calloc -> Just a warning
