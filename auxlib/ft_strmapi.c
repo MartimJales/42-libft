@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = -1;
-	size = strlen(s);
+	size = ft_strlen(s);
 	new = malloc(size + 1);
 	while (s[++i])
 		new[i] = f(i, s[i]);
