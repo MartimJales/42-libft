@@ -46,6 +46,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	len_new = end - begin + 1;
 	new = malloc(len_new + 1);
+	if (!new)
+		return (NULL);
 	ft_strlcpy(new, s1 + begin, len_new + 1);
 	return (new);
 }

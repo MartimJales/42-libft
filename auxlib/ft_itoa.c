@@ -71,6 +71,8 @@ char	*ft_itoa(int n)
 
 	len = power_ten(n);
 	num = malloc(len + 1);
+	if (!num)
+		return (NULL);
 	new = n;
 	i = 0;
 	if (n < 0)

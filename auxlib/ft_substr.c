@@ -29,12 +29,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > len_s)
 	{
 		sub = malloc(1);
+		if (!sub)
+			return (NULL);
 		*sub = 0;
 		return (sub);
 	}
 	if (start + len > len_s)
 		len -= start;
 	sub = malloc(len + 1);
+	if (!sub)
+		return (NULL);
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }

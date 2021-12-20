@@ -59,6 +59,8 @@ char	**ft_split(char const *s, char c)
 
 	num = string_number(s, c);
 	arr = malloc(sizeof(char *) * (num + 1));
+	if (!arr)
+		return (NULL);
 	i = -1;
 	while (++i < num)
 	{

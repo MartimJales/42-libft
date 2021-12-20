@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen((char *)s);
 	new = malloc(len + 1);
+	if (!new)
+		return (NULL);
 	i = -1;
 	while (s[++i])
 		new[i] = s[i];

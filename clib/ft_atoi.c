@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	base = 0;
 	i = 0;
-	if (!str)
+	if (!str[0])
 		return (0);
 	while (str[i] >= '\t' && str[i] <= ' ')
 		i++;
